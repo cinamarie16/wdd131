@@ -25,6 +25,10 @@ nav {
     justify-content: center;
 }
 
+.navigation li {
+    flex: 1 1 auto;
+}
+
 .navigation a {
     display: block;
     text-decoration: none;
