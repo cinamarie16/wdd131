@@ -5,36 +5,32 @@ body {
     margin: 0;
 }
 
-
-header {
+header, footer {
     background-color: plum;
     padding: 0.75rem 0.75rem 2rem;
     grid-column: 1 / 4;
 }
 
+header {
+    position: relative;
+    height: 150px;
+}
+
 nav {
-    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px; 
     background-color: black;
 }
 
-.navigation {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.navigation li {
-    flex: 1 1 auto;
-}
-
-.navigation a {
-    display: block;
+nav a {
     text-decoration: none;
-    padding: 0.75rem;
     color: white;
-    text-align: center;
 }
 
 main {
@@ -50,8 +46,5 @@ aside {
 }
 
 footer {
-    grid-column: 1 / 4;
-    background-color: plum;
-    padding: 0.75rem 0.75rem 2rem;
     text-align: center;
 }
