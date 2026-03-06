@@ -1,8 +1,5 @@
 :root {
     --border-style: 1px solid black;
-    --heading-text: font-family: "IBM Plex Serif", serif;
-    --body-text: font-family: "Roboto Condensed", sans-serif;
-    --purple-background: background-color: #9C78AD;
 }
 
 * {
@@ -12,8 +9,11 @@
     color: black;
 }
 
-header,
-footer {
+header {
+    padding: 5px;
+}
+
+header, footer {
     background-color: #DBDBDB;
     font-family: "IBM Plex Serif", serif;
     border-radius: 5px;
@@ -81,7 +81,7 @@ h2 {
     font-family: "IBM Plex Serif", serif;
     font-weight: 400;
     background-color: #9C78AD;
-    color: #402D49;
+    color: black;
     text-align: center;
     padding: 5px;
     border-radius: 5px;
