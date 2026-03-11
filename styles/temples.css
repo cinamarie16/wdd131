@@ -43,7 +43,7 @@ header, footer {
     content: "✖️";
 }
 
-.navigation {
+nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -52,7 +52,7 @@ header, footer {
     color: #001719;
 }
 
-.navigation a {
+nav a {
     display: block;
     text-decoration: none;
     padding: .5rem;
@@ -67,7 +67,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-.navigation li {
+nav li {
     display: none;
 }
 
@@ -75,7 +75,7 @@ nav a:hover {
     display: block;
 }
 
-h1 {
+h1, h2 {
     font-weight: 600;
     text-align: center;
     padding: 1rem;

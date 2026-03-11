@@ -20,16 +20,20 @@
         display: none;
     }
 
-    .navigation {
+    nav {
         display: flex;
-        flex-direction: row;
         background-color: #b9f7fe;
         padding: 10px;
-        justify-content: flex-end;
         align-items: center;
     }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
 
-    .navigation li {
+    }
+
+    nav li {
         display: block;
     }
 }

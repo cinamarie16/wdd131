@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById("lastModified").innerHTML = `Last Modified: <span> ${document.lastModified}</span>`;
 
 const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
+const navigation = document.querySelector("nav");
 
 hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
