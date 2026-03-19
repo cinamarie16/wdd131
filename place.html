@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Place Page</title>
+    <meta name="description" content="A page about my home state in the USA. Washington is a place
+        I love more than where I currently live.">
+    <meta name="author" content="Lucina Huff">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Washington State</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/washington-large.webp" media="(min-width: 1000px)">
+                    <img src="images/washington-small.webp" alt="Western Washington evergreen forest" width="500" height="600">
+                </picture>
+            </div>
+    
+            <h2 class="data-heading">Data</h2>
+            <div class="data">
+                <span>Area:</span>
+                <p>71,362 sq miles</p>
+                <span>Population:</span>
+                <p>8,115,100</p>
+                <span>State Capitol:</span>
+                <p>Olympia, WA</p>
+                <span>Language:</span>
+                <p>English</p>
+                <span>Currency:</span>
+                <p>US Dollar</p>
+                <span>Time Zone:</span>
+                <p>UTC-8</p>
+            </div>
+    
+            <h2 class="weather-heading" data-emoticon="🌦️">Weather</h2>
+            <div class="weather">
+                <img src="images/rain-forecast-svgrepo-com.svg" alt="clouds and rainy weather">
+                <span>Temperature:</span>
+                <p>49 °F</p>
+                <span>Conditions:</span>
+                <p>Partly Sunny with Light Rain</p>
+                <span>Wind:</span>
+                <p>11 mph</p>
+                <span>Wind Chill:</span>
+                <p><span id="windChill"></span></p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 📔 Lucina M. Huff 📖 Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
