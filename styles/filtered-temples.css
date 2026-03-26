@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #001719;
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+header, footer {
+    border: 2px solid #0291A1;
+    border-radius: 10px;
+    background-color: #b9f7fe;
+    box-shadow: 2px 2px 7px #bbb;
+}
+
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #001719;
+    position: fixed;
+    top: 0.5em;
+    right: 0.75em;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖️";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: #0291A1;
+    color: #001719;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #001719;
+}
+
+nav a:hover {
+    background-color: #E6FCFF;
+    border: 1px solid #0291A1;
+    border-radius: 5px;
+}
+
+nav li {
+    display: none;
+}
+
+.open li {
+    display: block;
+}
+
+h1, h2 {
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+img {
+    box-shadow: 2px 2px 7px #bbb;
+    margin-bottom: 5px;
+}
+
+footer {
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+footer p {
+    margin: 0;
+}

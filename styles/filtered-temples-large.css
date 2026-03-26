@@ -1,0 +1,39 @@
+@media screen and (min-width: 500px) {
+    main {
+        max-width: 100em;
+    }
+    
+    header, footer {
+        max-width: 90em;
+    }
+    
+    header {
+        display: flex;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        background-color: #b9f7fe;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    nav li {
+        display: block;
+    }
+}
