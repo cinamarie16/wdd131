@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ header, main, footer {
     text-align: center;
 }
 
-header, footer {
+header, footer, .card {
     border: 2px solid #0291A1;
     border-radius: 10px;
     background-color: #b9f7fe;
@@ -75,21 +75,10 @@ nav li {
     display: block;
 }
 
-h1, h2 {
+h2 {
     font-weight: 600;
     text-align: center;
     padding: 1rem;
-}
-
-figure {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-}
-
-img {
-    box-shadow: 2px 2px 7px #bbb;
-    margin-bottom: 5px;
 }
 
 footer {
@@ -100,4 +89,28 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    justify-content: center;
+    padding: 2px 16px;
+}
+
+.card {
+    margin: .5rem;
+    text-align: center;
+}
+
+.temple-info {
+    padding-bottom: .5rem;
+}
+.temple-info p {
+    padding-bottom: .5rem;
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
 }

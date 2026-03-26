@@ -103,7 +103,7 @@ const temples = [
 function createTempleCard(temple) {
     return `
     <div class="card">
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" class="card-img">
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" class="card-img" width=400 height=250>
         <div class="temple-info">
             <h2>${temple.templeName}</h2>
             <p>Location: ${temple.location}</p>
@@ -119,3 +119,34 @@ document.addEventListener("DOMContentLoaded", () => {
     templeCard.innerHTML = temples.map(createTempleCard).join("");
 
 })
+
+const oldLink = document.querySelector("#old");
+oldLink.addEventListener("click", () => {
+    // const dedicated = temples.map((temple) => temple.dedicated);
+    // let year = dedicated.slice(0, 4);
+    // const yearNumber = Number(year);
+    let oldTemples = temples.filter(temple => parseInt(temple.dedicated) < 1900);
+    const templeCard = document.getElementById("container");
+    templeCard.innerHTML = oldTemples.map(createTempleCard).join("");
+});
+
+const newLink = document.querySelector("#new");
+newLink.addEventListener("click", () => {
+    let newTemples = temples.filter(temple => parseInt(temple.dedicated) > 2000);
+    const templeCard = document.getElementById("container");
+    templeCard.innerHTML = newTemples.map(createTempleCard).join("");
+});
+
+const largeLink = document.querySelector("#large");
+largeLink.addEventListener("click", () => {
+    let largeTemples = temples.filter(temple => temple.area > 90000);
+    const templeCard = document.getElementById("container");
+    templeCard.innerHTML = largeTemples.map(createTempleCard).join("");
+});
+
+const smallLink = document.querySelector("#small");
+smallLink.addEventListener("click", () => {
+    let smallTemples = temples.filter(temple => temple.area < 10000);
+    const templeCard = document.getElementById("container");
+    templeCard.innerHTML = smallTemples.map(createTempleCard).join("");
+});
