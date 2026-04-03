@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Product Review Form</title>
+    <meta name="description" content="WDD 131 week05 assignment to create a product review form.">
+    <meta name="author" content="Lucina M. Huff">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Product Review</h1>
+    <form method="get" action="review.html">
+        <fieldset>
+
+            <legend>Product Review Form</legend>
+            <label for="productSelect" class="labelHeading">Product Name
+                <select name="productSelect" id="productSelect" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
+            </label>
+    
+            <div>Overall Rating</div>
+            <label><input type="radio" name="rating" id="1star" required> &star;</label>
+            <label><input type="radio" name="rating" id="2star" required> &star;&star;</label>
+            <label><input type="radio" name="rating" id="3star" required> &star;&star;&star;</label>
+            <label><input type="radio" name="rating" id="4star" required> &star;&star;&star;&star;</label>
+            <label><input type="radio" name="rating" id="5star" required> &star;&star;&star;&star;&star;</label>
+    
+            <!-- <div>Date of Installation</div> -->
+            <label class="labelHeading">Date of Installation <input type="date" name="installDate" id="installDate" required></label>
+    
+            <div>Which features did you find useful in the product? (Check all that apply)</div>
+            <label><input type="checkbox" name="durability" id="durability" value="yes"> Durability</label>
+            <label><input type="checkbox" name="ease" id="ease" value="yes"> Ease of Use</label>
+            <label><input type="checkbox" name="Performance" id="Performance" value="yes"> Performance</label>
+            <label><input type="checkbox" name="Design" id="Design" value="yes"> Design</label>
+
+    
+            <label class="labelHeading">Written Review (optional) <textarea name="writtenReview" id="writtenReview"></textarea></label>
+    
+            <label class="labelHeading">Your Name (optional) <input type="text" name="name" id="name"></label>
+
+            <input type="submit" value="Post Review">
+        </fieldset>
+    </form>
+
+    <footer>
+        <p>&copy;<span id='currentyear'></span> 📔 Lucina M. Huff 📖 Utah</p>
+        <p id='lastModified'></p>
+    </footer>
+</body>
+</html>
