@@ -1,0 +1,5 @@
+@media screen and (min-width: 500px) {
+    fieldset {
+        max-width: 800px;
+    }
+}
