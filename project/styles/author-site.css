@@ -1,0 +1,207 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+:root {
+    --primary: #74226C;
+    --accent: #B8D2B7;
+    --font: #40193B;
+    --background: #BFB1C1;
+    --accent2: #FBFA8D;
+    --borderStyle: 5px groove #74226C;
+    --thinBorder: 2px solid #40193B;
+    --borderRadius: 10px 0px;
+    --headingFont: "Satisfy", cursive;
+    --bodyFont: "Lora", serif;
+    --boxShadow: 5px 5px 5px var(--primary);
+}
+
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    background: var(--accent);
+    color: var(--font);
+    position: fixed;
+    top: 0.75em;
+    right: 0.75em;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖️";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: var(--accent);
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    color: var(--font);
+    margin-top: 2px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--font);
+    font-family: var(--bodyFont);
+}
+
+nav a:hover {
+    background-color: var(--accent2);
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+}
+
+nav li {
+    display: none;
+}
+
+.open li {
+    display: block;
+}
+
+body {
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+h1, h2, footer {
+    border: var(--borderStyle);
+    border-radius: var(--borderRadius);
+    text-align: center;
+}
+
+h1, footer {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+h1, h2 {
+    font-family: var(--headingFont);
+    padding: .5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    background-color: var(--accent);
+    margin-top: 2px;
+}
+
+main p {
+    background-color: var(--background);
+    font-family: var(--bodyFont);
+    padding: 5px;
+    text-align: center;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    place-items: center;
+    justify-content: center;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.flip-card {
+    border: var(--borderStyle);
+    border-radius: var(--borderRadius);
+    background-color: transparent;
+    perspective: 1000px;
+    box-shadow: 0 4px 8px 0 #74226C33, 0 6px 20px 0 #74226C30;
+}
+
+.flip-card-inner {
+    text-align: center;
+    transition: transform 0.8s, height 0.8s;
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "card";
+}
+
+.flip-card.is-flipped .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card.is-flipped .flip-card-back {
+    position: relative;
+}
+
+.flip-card.is-flipped .flip-card-front {
+    position: absolute;
+    /* backface-visibility: hidden; */
+}
+
+.flip-card-front,
+.flip-card-back {
+    grid-area: card;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--borderRadius);
+    background-color: var(--background);
+    color: var(--font);
+    transform: rotateX(0deg);
+}
+
+.flip-card-front {
+    position: relative;
+}
+
+.flip-card-back {
+    position: absolute;
+    transform: rotateY(180deg);
+    flex-direction: column;
+}
+
+.flip-card-back h2 {
+    width: 97%;
+}
+
+.flip-card-back p {
+    padding: 10px;
+}
+
+.flip-card-back button {
+    background-color: var(--accent2);
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    font-family: var(--bodyFont);
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: var(--boxShadow);
+    margin-bottom: 5px;
+}
+
+.card-img {
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+    width: 97%;
+    height: 97%;
+}
+
+footer {
+    margin-top: 10px;
+    font-family: var(--bodyFont);
+    font-size: .9rem;
+}

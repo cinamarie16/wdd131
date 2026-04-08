@@ -117,7 +117,6 @@ function createTempleCard(temple) {
 document.addEventListener("DOMContentLoaded", () => {
     const templeCard = document.getElementById("container");
     templeCard.innerHTML = temples.map(createTempleCard).join("");
-
 })
 
 const oldLink = document.querySelector("#old");
