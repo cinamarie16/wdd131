@@ -33,7 +33,7 @@ function createBookCard(book) {
     card.innerHTML = `
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="${book.image}" alt="${book.title}" loading="lazy" class="card-img" width=360 height=auto>
+                <img src="${book.image}" alt="${book.title}" loading="lazy" class="card-img" width="400" height="auto">
             </div>
             <div class="flip-card-back">
                 <h2>${book.title}</h2>

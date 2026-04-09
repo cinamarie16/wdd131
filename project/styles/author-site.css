@@ -10,6 +10,7 @@
     --font: #40193B;
     --background: #BFB1C1;
     --accent2: #FBFA8D;
+    --input: #FFFFF0;
     --borderStyle: 5px groove #74226C;
     --thinBorder: 2px solid #40193B;
     --borderRadius: 10px 0px;
@@ -100,8 +101,10 @@ h1 {
 }
 
 h2 {
-    background-color: var(--accent);
-    margin-top: 2px;
+    background-color: var(--accent2);
+    margin-top: .5rem;
+    font-size: 1.75rem;
+    width: 98%;
 }
 
 main p {
@@ -110,6 +113,22 @@ main p {
     padding: 5px;
     text-align: center;
 }
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -118,6 +137,18 @@ main p {
     justify-content: center;
     padding: .5rem;
     overflow: hidden;
+}
+
+.author-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.author-container .flip-card,
+.author-container p {
+    background-color: var(--accent);
 }
 
 .flip-card {
@@ -197,7 +228,103 @@ main p {
     border-radius: var(--borderRadius);
     box-shadow: var(--boxShadow);
     width: 97%;
-    height: 97%;
+}
+
+form {
+    font-family: var(--bodyFont);
+    color: var(--font);
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    margin: 10px;
+    background-color: var(--accent);
+    width: 100%;
+    max-width: 750px;
+}
+
+fieldset {
+    margin: 1rem auto;
+    padding: .75rem;
+    border: var(--borderStyle);
+    border-radius: var(--borderRadius);
+    width: 100%;
+    min-width: 0;
+    max-width:500px;
+}
+
+legend {
+    padding: 0 .5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 0;
+}
+
+label, .label-heading {
+    display: block;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.label-heading {
+    padding-top: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    background-color: var(--input);
+    padding: .75rem;
+    color: var(--font);
+    width: 100%;
+    min-width: 300px;
+    max-width: 450px;
+}
+
+input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--input), var(--accent2));
+    color: var(--font);
+    border-radius: var(--borderRadius);
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: 1rem auto;
+    box-shadow: var(--boxShadow);
+    font-size: 1.1rem;
+}
+
+input:required,
+select:required {
+    border-left: 8px solid var(--accent2);
+}
+
+input:required:valid,
+select:required:valid {
+    border-left: 8px solid var(--primary);
+}
+
+.confirmation {
+    background-color: var(--accent2);
+    border: var(--thinBorder);
+    border-radius: var(--borderRadius);
+    margin-top: .5rem;
+    width: 90%;
 }
 
 footer {

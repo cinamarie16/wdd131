@@ -20,9 +20,22 @@
 
     .flip-card:hover .flip-card-front {
         position: absolute;
-        /* backface-visibility: hidden; */
+    }
+    form {
+        max-width: 900px;
+    }
+    fieldset {
+        max-width: 800px;
     }
 
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        min-width: 400px;
+        max-width: 550px;
+    }
+    
     #menu {
         display: none;
     }
