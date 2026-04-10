@@ -55,7 +55,7 @@ function createFlipCard(author) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("card-container");
+    const container = document.getElementById("author-container");
     authors.forEach(author => {
         const authorCard = createFlipCard(author);
         authorCard.addEventListener("click", function () {
@@ -74,3 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(authorCard);
     });
 });
+
